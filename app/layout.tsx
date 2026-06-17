@@ -14,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lance",
-  description: "Professional portfolio showcasing full-stack web development, cybersecurity achievements, and systems engineering infrastructure.",
+  title: "Lance Achacoso | Full Stack & Systems Engineer",
+  description: "Portfolio of Lance Achacoso. Showcasing Full Stack Web Development, API Troubleshooting, and System Administration.",
+  // You can add keywords too!
+  keywords: ["Lance Achacoso", "Full Stack Developer", "Technical Support", "Next.js", "React", "Cybersecurity"],
 };
 
 export default function RootLayout({
