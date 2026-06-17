@@ -21,7 +21,7 @@ const LinkedinIcon = ({ size = 20 }) => (
 
 export default function Home() {
   return (
-    <main className="w-full pb-20">
+    <main className="w-full pb-10">
       
       {/* Top Navigation Bar */}
       <nav className="flex justify-between items-center mb-16 md:mb-24">
@@ -31,16 +31,15 @@ export default function Home() {
         <ThemeToggle />
       </nav>
 
-      {/* Immersive Hero Section - items-center ensures the image and text are perfectly aligned horizontally */}
+      {/* Immersive Hero Section */}
       <section className="flex flex-col-reverse lg:flex-row justify-between items-center mb-32 gap-12 lg:gap-8 relative">
         
-        {/* Decorative background blur (subtle glow) */}
+        {/* Decorative background blur */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-emerald-500/10 dark:bg-emerald-500/5 blur-[100px] -z-10 rounded-full" />
 
         {/* Left Side: Text Content */}
         <div className="flex-1 space-y-8 text-center lg:text-left z-10">
           
-          {/* Status Pill */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/50 text-sm font-medium text-zinc-800 dark:text-zinc-200">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -49,7 +48,6 @@ export default function Home() {
             Open for Freelance Website Projects
           </div>
 
-          {/* Typography Hierarchy */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
               Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">{portfolioData.header.name}</span>
@@ -57,13 +55,11 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl text-zinc-600 dark:text-zinc-400 font-semibold tracking-tight">
               {portfolioData.header.role}
             </h2>
-            {/* text-justify formats the bio perfectly block-to-block */}
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg max-w-2xl mx-auto lg:mx-0 text-justify">
               {portfolioData.header.bio}
             </p>
           </div>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
             <a 
               href={portfolioData.header.socials.email}
@@ -80,7 +76,6 @@ export default function Home() {
                 target="_blank" 
                 rel="noreferrer"
                 className="p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900 hover:border-emerald-500/50 hover:text-emerald-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                aria-label="GitHub Profile"
               >
                 <GithubIcon size={22} />
               </a>
@@ -89,7 +84,6 @@ export default function Home() {
                 target="_blank" 
                 rel="noreferrer"
                 className="p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900 hover:border-emerald-500/50 hover:text-emerald-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                aria-label="LinkedIn Profile"
               >
                 <LinkedinIcon size={22} />
               </a>
@@ -111,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Capabilities / Bento Grid Section */}
+      {/* Capabilities Section */}
       <section className="space-y-8">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
@@ -131,12 +125,7 @@ export default function Home() {
             return (
               <div
                 key={index}
-                className={`
-                  group relative flex flex-col justify-between overflow-hidden rounded-3xl p-8 
-                  bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 
-                  hover:border-emerald-500/30 dark:hover:border-emerald-500/30 transition-all duration-500
-                  bento-glow ${spanClass} shadow-sm hover:shadow-xl hover:shadow-emerald-500/5
-                `}
+                className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl p-8 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 hover:border-emerald-500/30 dark:hover:border-emerald-500/30 transition-all duration-500 bento-glow ${spanClass} shadow-sm hover:shadow-xl hover:shadow-emerald-500/5`}
               >
                 <div className="z-10 h-full flex flex-col">
                   <div className={`inline-flex p-3 rounded-xl border mb-6 w-max transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 ${item.color}`}>
@@ -151,7 +140,6 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent dark:from-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
             );
@@ -159,23 +147,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience & Journey Timeline */}
+      {/* Experience Timeline */}
       <section className="mt-32 space-y-8">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Experience & Journey
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 text-lg">
-            My professional background in Web Development, Technical Support, and Cybersecurity.
+            My professional background in engineering and support.
           </p>
         </div>
 
-        {/* Ensure portfolioData.experience exists before mapping */}
         {portfolioData.experience && portfolioData.experience.length > 0 && (
           <div className="relative border-l border-zinc-200 dark:border-zinc-800 ml-3 md:ml-4 space-y-12 pb-8">
             {portfolioData.experience.map((exp, index) => (
               <div key={index} className="relative pl-8 md:pl-12 group">
-                {/* Timeline Dot */}
                 <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-zinc-200 dark:bg-zinc-800 ring-4 ring-zinc-50 dark:ring-zinc-950 group-hover:bg-emerald-500 group-hover:ring-emerald-500/20 transition-all duration-300" />
                 
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2 gap-2 sm:gap-0">
@@ -191,13 +177,48 @@ export default function Home() {
                   {exp.company}
                 </h4>
                 
-                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl">
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-3xl text-justify">
                   {exp.description}
                 </p>
               </div>
             ))}
           </div>
         )}
+      </section>
+
+      {/* CTA & Footer Section */}
+      <section className="mt-32">
+        <div className="rounded-3xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-8 md:p-16 text-center space-y-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full" />
+          
+          <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white">
+              Let's build something impactful.
+            </h2>
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg">
+              Whether you need a full-stack application built from scratch or high-level technical troubleshooting, I'm currently open for new projects.
+            </p>
+          </div>
+
+          <div className="relative z-10 flex justify-center pt-4">
+            <a 
+              href={portfolioData.header.socials.email}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-zinc-950 font-bold hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-emerald-500/20"
+            >
+              <Mail size={20} />
+              <span>Say Hello</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Minimal Footer */}
+        <footer className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-500 dark:text-zinc-400 text-sm">
+          <p>© {new Date().getFullYear()} Lance Achacoso. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href={portfolioData.header.socials.github} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">GitHub</a>
+            <a href={portfolioData.header.socials.linkedin} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">LinkedIn</a>
+          </div>
+        </footer>
       </section>
 
     </main>
