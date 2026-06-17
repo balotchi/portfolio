@@ -4,12 +4,12 @@ export const portfolioData = {
   header: {
     name: "Lance Achacoso",
     role: "Full Stack Developer & Technical Support Engineer",
-    bio: "Bridging the gap between software development and systems engineering. From building modern web applications to hardware repair and competitive cybersecurity.",
+    bio: "Full-Stack Web Developer, Technical Support Specialist, and Cybersecurity Enthusiast with experience in API investigation, log analysis, penetration testing, system troubleshooting, and web application development. Skilled in React.js, modern web technologies, operating systems, hardware support, and security-focused problem-solving, with a strong commitment to delivering efficient, secure, and reliable solutions.",
     // Update these links with your actual URLs
     socials: {
-      email: "mailto:your.email@example.com", 
-      github: "https://github.com/yourusername",
-      linkedin: "https://linkedin.com/in/yourusername",
+      email: "mailto:your.lanceachacoso01@gmail.com", 
+      github: "https://github.com/balotchi",
+      linkedin: "https://linkedin.com/in/lance-achacoso-035367415",
     }
   },
   bentoItems: [
@@ -21,14 +21,14 @@ export const portfolioData = {
       color: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
     },
     {
-      title: "Cybersecurity & DICT",
+      title: "Cybersecurity / Penetration Testing",
       description: "Two-time participant in DICT technical hacking and cybersecurity competitions.",
       icon: ShieldAlert,
       size: "medium",
       color: "bg-red-500/10 text-red-500 border-red-500/20",
     },
     {
-      title: "API & Log Investigation",
+      title: "Technical Support Engineer",
       description: "Deep-dive troubleshooting of API communications, analyzing system logs, and diagnosing complex technical issues.",
       icon: Network, // Changed the icon to Network to better represent API routing
       size: "medium",
